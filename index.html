@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Golden Plate — Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>The Golden Plate</h1>
+      <p class="tagline">Fresh ingredients · Timeless flavours · Daily specials</p>
+      <a href="#menu" class="cta-button">View Today's Menu</a>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <h2>Our Menu</h2>
+    <p class="menu-subtitle">Prices and today's specials are updated live from our kitchen</p>
+
+    <!-- Loading State -->
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading menu…</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="error" class="error hidden">
+      <p>⚠️ Could not load the menu. Please try again later.</p>
+      <button onclick="fetchMenu()">Retry</button>
+    </div>
+
+    <!-- Today's Specials -->
+    <div id="specials-section" class="specials-section hidden">
+      <h3>⭐ Today's Specials</h3>
+      <div id="specials-grid" class="menu-grid"></div>
+    </div>
+
+    <!-- Full Menu -->
+    <div id="menu-section" class="full-menu hidden">
+      <h3>Full Menu</h3>
+      <div id="menu-grid" class="menu-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 The Golden Plate &middot; Menu powered by <a href="https://docs.google.com/spreadsheets" target="_blank" rel="noopener">Google Sheets</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
